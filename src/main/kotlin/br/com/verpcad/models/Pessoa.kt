@@ -9,12 +9,12 @@ import javax.persistence.*
 class Pessoa {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    var id: Long? = null
     @Column(name = "nome", nullable = false)
-    val nome: String? = null
+    var nome: String? = null
     @Column(name = "data_nascimento", nullable = false)
-    val dataNasciment: Date? = null
+    var dataNasciment: Date? = null
     @Column(name = "cpf", length = 14, nullable = false)
-    val cpf: String? = null
+    var cpf: String? = null
 }
