@@ -5,7 +5,7 @@ import javax.persistence.*
 
 
 @Entity
-@Table(name = "pessoa")
+@Table(name = "pessoas")
 class Pessoa {
 
     @Id
@@ -17,4 +17,8 @@ class Pessoa {
     var dataNasciment: Date? = null
     @Column(name = "cpf", length = 14, nullable = false)
     var cpf: String? = null
+
+    @ManyToOne()
+    @JoinColumn(name = "id_endereco")
+    var endereco: Endereco? = null
 }
